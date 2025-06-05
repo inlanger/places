@@ -8,10 +8,7 @@ The goal is to help our local Ukrainian IT community discover, support, and conn
 
 ---
 
-## 🗺 Live map
-
-Coming soon via GitHub Pages  
-(example: https://map.pizd.es)
+## 🗺 Live map (https://map.pizd.es)
 
 ---
 
@@ -23,7 +20,7 @@ We use a public JSON file to store business listings. You can suggest additions 
 1. Fork this repo
 2. Edit [`data/businesses.json`](data/businesses.json)
 3. Follow the format shown below
-4. Open a Pull Request — once approved by 2 members, it will be merged automatically
+4. Open a Pull Request — once approved by 7 members, it will be merged automatically
 
 ### Example:
 ```json
