@@ -1,1 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Ukrainian Business Map — Valencia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    html, body { margin: 0; padding: 0; height: 100%; }
+    #map { width: 100%; height: 100%; }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
 
+  <script>
+    async function initMap() {
+      const map = new google.maps.Map(document.getElementById('map'), {
+        center: { lat: 39.4699, lng: -0.3763 }, // Valencia
+        zoom: 13,
+      });
+
+      try {
+        const response = await fetch('data/businesses.json');
+        const businesses = await response.json();
+
+        businesses.forEach(b => {
+          const marker = new google.maps.Marker({
+            position: { lat: b.location.lat, lng: b.location.lng },
+            map,
+            title: b.name
+          });
+
+          const info = `
+            <div>
+              <strong>${b.name}</strong><br>
+              ${b.address || ''}<br>
+              ${b.contact || ''}<br>
+              ${b.instagram ? `<a href="${b.instagram}" target="_blank">Instagram</a><br>` : ''}
+              ${b.website ? `<a href="${b.website}" target="_blank">Website</a><br>` : ''}
+              ${b.maps_url ? `<a href="${b.maps_url}" target="_blank">Google Maps</a>` : ''}
+            </div>
+          `;
+
+          const infowindow = new google.maps.InfoWindow({ content: info });
+
+          marker.addListener('click', () => infowindow.open(map, marker));
+        });
+      } catch (err) {
+        console.error("Failed to load businesses.json:", err);
+      }
+    }
+  </script>
+
+  <script
+    async
+    defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap">
+  </script>
+</body>
+</html>
