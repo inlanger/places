@@ -33,7 +33,7 @@
         },
         "additionalProperties": false
       },
-
+      "maps_url":  { "type": "string", "format": "uri" }",
       "address":   { "type": "string" },
       "contact":   { "type": "string" },
       "website":   { "type": "string", "format": "uri" },
