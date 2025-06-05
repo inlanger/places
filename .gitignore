@@ -1,1 +1,13 @@
+# Editor/OS stuff
+.DS_Store
+.vscode/
+.idea/
 
+# Build output
+index.html
+
+# Logs, system
+*.log
+
+# GitHub Actions artifacts (if any locally)
+dist/
