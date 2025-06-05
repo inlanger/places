@@ -1,1 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Українські бізнеси у Валенсії",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["name", "category", "location"],
+    "properties": {
+      "name": { "type": "string" },
 
+      "category": {
+        "type": "string",
+        "enum": [
+          "Кафе та ресторани",
+          "Краса та здоров’я",
+          "Магазини та торговля",
+          "Медицина та фармація",
+          "Юридичні та фінансові послуги",
+          "ІТ та маркетинг",
+          "Освіта та курси",
+          "Спорт та фітнес",
+          "Туризм та готелі",
+          "Інше"
+        ]
+      },
+
+      "location": {
+        "type": "object",
+        "required": ["lat", "lng"],
+        "properties": {
+          "lat": { "type": "number", "minimum": -90,  "maximum": 90  },
+          "lng": { "type": "number", "minimum": -180, "maximum": 180 }
+        },
+        "additionalProperties": false
+      },
+
+      "address":   { "type": "string" },
+      "contact":   { "type": "string" },
+      "website":   { "type": "string", "format": "uri" },
+      "instagram": { "type": "string", "format": "uri" }
+    },
+    "additionalProperties": false
+  }
+}
