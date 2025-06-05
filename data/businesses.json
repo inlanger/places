@@ -1,1 +1,37 @@
-
+[
+  {
+    "name": "Кав'ярня «Доброго Ранку»",
+    "category": "Кафе та ресторани",
+    "location": { "lat": 39.4712, "lng": -0.3768 },
+    "address": "Carrer de Xàtiva, 12, Valencia",
+    "contact": "+34 612 345 678",
+    "instagram": "https://instagram.com/dobrogo_ranku_valencia",
+    "maps_url": "https://maps.app.goo.gl/example1"
+  },
+  {
+    "name": "Студія краси «Ластівка»",
+    "category": "Краса та здоров’я",
+    "location": { "lat": 39.4635, "lng": -0.3699 },
+    "address": "Carrer del Comte d'Altea, 45, Valencia",
+    "contact": "+34 622 111 333",
+    "website": "https://lastivka.es",
+    "maps_url": "https://maps.app.goo.gl/example2"
+  },
+  {
+    "name": "«Чесно» – юридична допомога",
+    "category": "Юридичні та фінансові послуги",
+    "location": { "lat": 39.4781, "lng": -0.3792 },
+    "address": "Av. del Regne de València, 100, Valencia",
+    "contact": "+34 699 999 999",
+    "website": "https://chesno.law",
+    "maps_url": "https://maps.app.goo.gl/example3"
+  },
+  {
+    "name": "Go Tech – ІТ-рішення",
+    "category": "ІТ та маркетинг",
+    "location": { "lat": 39.4750, "lng": -0.3805 },
+    "address": "Carrer de Bailèn, 8, Valencia",
+    "website": "https://gotech.dev",
+    "maps_url": "https://maps.app.goo.gl/example4"
+  }
+]
