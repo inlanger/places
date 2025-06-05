@@ -11,7 +11,7 @@ The goal is to help our local Ukrainian IT community discover, support, and conn
 ## 🗺 Live map
 
 Coming soon via GitHub Pages  
-(example: https://yourname.github.io/ua-business-map)
+(example: https://map.pizd.es)
 
 ---
 
