@@ -1,1 +1,25 @@
+name: Validate businesses.json
 
+on:
+  pull_request:
+    paths:
+      - 'data/businesses.json'
+
+jobs:
+  validate-json:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install jsonschema
+        run: pip install jsonschema
+
+      - name: Run validation script
+        run: python scripts/validate.py
