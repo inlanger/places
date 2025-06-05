@@ -25,7 +25,7 @@ jobs:
           sed "s/__API_KEY__/${{ secrets.MAPS_API_KEY }}/g" index.template.html > index.html
 
       - name: Upload site artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           path: .
 
